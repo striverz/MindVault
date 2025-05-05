@@ -16,7 +16,10 @@ const defaultStyles = "flex items-center gap-2 ";
 
 const Button = (props: ButtonProps) => {
   return (
-    <button className={`${variantStyles[props.variant]} ${defaultStyles}`}>
+    <button
+      onClick={props.onClick}
+      className={`${variantStyles[props.variant]} ${defaultStyles}`}
+    >
       {props.icon}
       {props.text}
     </button>
