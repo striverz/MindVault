@@ -1,3 +1,4 @@
+import Body from "./components/Body";
 import Button from "./components/Button";
 import PlusIcon from "./icons/PlusIcon";
 import ShareIcon from "./icons/ShareIcon";
@@ -11,6 +12,9 @@ const App = () => {
           <Button text="Share Brain" variant="primary" icon={<ShareIcon />} />
           <Button text="Add Content" variant="secondary" icon={<PlusIcon />} />
         </div>
+      </div>
+      <div>
+        <Body />
       </div>
     </div>
   );
