@@ -4,6 +4,7 @@ interface ButtonProps {
   variant: "primary" | "secondary";
   text: string;
   icon?: ReactElement;
+  onClick?: () => void;
 }
 
 const variantStyles = {

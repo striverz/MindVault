@@ -1,10 +1,10 @@
 import { ReactElement } from "react";
 
 interface CardProps {
-  title?: string;
-  editBtn?: ReactElement;
-  deleteBtn?: ReactElement;
-  embededLink?: string;
+  title: string;
+  editBtn: ReactElement;
+  deleteBtn: ReactElement;
+  embededLink: string;
   tags?: string[];
 }
 
@@ -29,8 +29,8 @@ const Card = ({ title, editBtn, deleteBtn, embededLink, tags }: CardProps) => {
       <div></div>
 
       <div className="flex justify-center gap-4 p-2  row-span-1">
-        {tags?.map((tag) => (
-          <p>{tag}</p>
+        {tags?.map((tag, ind) => (
+          <p key={ind}>{tag}</p>
         ))}
       </div>
     </div>
