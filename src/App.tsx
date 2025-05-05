@@ -1,13 +1,17 @@
-import { Button } from "./components/Button";
+import Button from "./components/Button";
+import PlusIcon from "./icons/PlusIcon";
+import ShareIcon from "./icons/ShareIcon";
 
 const App = () => {
-  const clickHere = () => {
-    console.log("Button is clicked!");
-  };
   return (
-    <div className="bg-red-100">
-      <Button text="Click Here" variant="primary" onClick={clickHere} />
-      <Button text="Click Here2" variant="secondary" onClick={clickHere} />
+    <div>
+      <div className=" flex justify-between items-center p-2 ">
+        <h1 className=" text-blue-600 text-xl cursor-pointer">MindVault</h1>
+        <div className="flex justify-end">
+          <Button text="Share Brain" variant="primary" icon={<ShareIcon />} />
+          <Button text="Add Content" variant="secondary" icon={<PlusIcon />} />
+        </div>
+      </div>
     </div>
   );
 };
